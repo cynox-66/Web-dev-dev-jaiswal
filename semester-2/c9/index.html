@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Propagation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div id="heading">
+      <h1>Event Flow Playground</h1>
+      <br />
+      <h3>Demonstrating Capturing , Bubbling & Propagation control</h3>
+    </div>
+
+    <div id="main">
+      <div id="Grandparent">
+        <h4>Grandparent</h4>
+        <div id="parent">
+          <h4>parent</h4>
+          <div id="child">
+            <h4>child</h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="EventLog">
+        <h4>Event Log</h4>
+        <br />
+        <div id="log"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
