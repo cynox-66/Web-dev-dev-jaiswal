@@ -1,0 +1,16 @@
+.navbar {
+    background-color: rgba(84, 176, 241, 0.699);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    padding: 12px 24px;
+    margin: 10px;
+}
+
+
+.navbar a:hover {
+    text-decoration: underline;
+}

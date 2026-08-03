@@ -1,0 +1,32 @@
+import NavBar from './class-3_and_4/NavBar'
+import { Route, Routes } from 'react-router-dom'
+import Home from './class-3_and_4/Home'
+import About from './class-3_and_4/About'
+import ProductList from './class-3_and_4/ProductList'
+import ProductD from './class-3_and_4/ProductD'
+import { ProductContext } from './class-3_and_4/ProductContext'
+
+const App = () => {
+  const products = [
+    { id: 1, name: 'iphone 16', price: '80000' },
+    { id: 2, name: 'Samsung S26', price: '110000' },
+    { id: 3, name: 'OnePlus 14', price: '60000' },
+    { id: 4, name: 'IQOO NEO 6', price: '20000' },
+    { id: 5, name: 'Nothing Phone 2', price: '40000' }
+  ];
+  return (
+    <ProductContext.Provider value={products}>
+    <div>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/products' element={<ProductList />} />
+        <Route path='/products/:id' element={<ProductD />} />
+      </Routes>
+    </div>
+    </ProductContext.Provider>
+  )
+}
+
+export default App
